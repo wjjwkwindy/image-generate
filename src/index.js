@@ -13,6 +13,7 @@ registerFont(path.resolve(__dirname, "fonts/Exo2-Regular.ttf"), {
  * @param {string} text 文字
  */
 const generateImg = (width = 100, height = 100 , text) => {
+    // TODO: 宽高参数校验、文字参数校验、宽高限制
     const canvas = createCanvas(width, height);
     const ctx = canvas.getContext("2d");
     
@@ -23,6 +24,7 @@ const generateImg = (width = 100, height = 100 , text) => {
     ctx.fillRect(0, 0, width, height);
 
     // 文字
+    // TODO: 文字大小随图片宽高变化
     ctx.font = '20px "Exo2-Regular"';
     ctx.textAlign = "center";
     ctx.fillStyle = "#aaaaaa";
